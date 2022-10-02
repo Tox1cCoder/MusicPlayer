@@ -46,7 +46,7 @@ const app = {
         },
         {
             name: 'Vây Giữ',
-            author: 'Nhậm Nhiên
+            author: 'Nhậm Nhiên,
             image: './assets/img/song2.jpg',
             path: './assets/music/song2.mp3'
         }
