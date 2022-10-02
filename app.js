@@ -46,9 +46,15 @@ const app = {
         },
         {
             name: 'Vây Giữ',
-            author: 'Nhậm Nhiên,
+            author: 'Nhậm Nhiên',
             image: './assets/img/song2.jpg',
             path: './assets/music/song2.mp3'
+        },
+        {
+            name: 'Thời Không Chuyển Dời',
+            author: 'Ngải Thần',
+            image: './assets/img/song3.jpg',
+            path: './assets/music/song3.mp3'
         }
     ],
 
@@ -255,8 +261,6 @@ const app = {
             }
         }
 
-
-        // Xử lý show / hide Playlist
         showPlaylistIcon.onclick = function () {
             _this.togglePlaylist()
         }
@@ -267,17 +271,14 @@ const app = {
             _this.togglePlaylist()
         }
         playlistInner.onclick = function () {
-            event.stopPropagation()
+            stopPropagation()
         }
 
-
-        // Xử lý Playlist
-        // Xử lý play song khi click trong Playlist
         const songs = $$('.playlist__item')
         songs.forEach((song, index) => {
             const option = song.querySelector('.playlist__item-option')
             option.onclick = function () {
-                event.stopPropagation()
+                stopPropagation()
             }
             song.onclick = function (e) {
                 if (e.target != option && _this.currentIndex != index) {
@@ -289,8 +290,6 @@ const app = {
             }
         })
 
-
-        // Xử lý volume
         volumeBtn.onclick = function () {
             _this.isMute = !_this.isMute
             this.classList.toggle('active', _this.isMute)
@@ -300,8 +299,6 @@ const app = {
                 audio.volume = _this.currentVolume
         }
 
-
-        // Xử lý Favourite List
         heartIcon.onclick = function () {
             _this.isFavourite = !_this.isFavourite
             this.classList.toggle('active')
@@ -315,12 +312,8 @@ const app = {
             }
         }
 
-
-        // Xử lý MOUSE EVENT
-        // Xử lý Seek, tua nhạc và thanh tiến trình
         progressBar.onmousedown = function (e) {
             audio.currentTime = e.offsetX / this.offsetWidth * audio.duration
-            // Đặt cái này để làm được vừa giữ vừa kéo
             _this.isHoldProgressBar = true
         }
         progressBar.onmousemove = function (e) {
@@ -328,7 +321,6 @@ const app = {
                 audio.currentTime = e.offsetX / this.offsetWidth * audio.duration
             }
         }
-        // Xử lý thanh volume
         volumeBar.onmousedown = function (e) {
             if (e.offsetX >= 0 && e.offsetX <= this.offsetWidth) {
                 _this.currentVolume = (e.offsetX / this.offsetWidth).toFixed(2)
@@ -371,7 +363,6 @@ const app = {
             }
         }
     },
-
 
     start() {
         this.defineProperties()
