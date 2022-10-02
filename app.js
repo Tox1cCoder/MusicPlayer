@@ -39,16 +39,16 @@ const app = {
 
     songs: [
         {
-            name: 'Matane Ga Areba',
-            author: 'Mirei Touyama',
-            image: './assets/img/song1.jpg',
-            path: './assets/music/song1.mp3'
-        },
-        {
             name: 'Vây Giữ',
             author: 'Nhậm Nhiên',
             image: './assets/img/song2.jpg',
             path: './assets/music/song2.mp3'
+        },
+        {
+            name: 'Matane Ga Areba',
+            author: 'Mirei Touyama',
+            image: './assets/img/song1.jpg',
+            path: './assets/music/song1.mp3'
         },
         {
             name: 'Thời Không Chuyển Dời',
