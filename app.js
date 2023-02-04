@@ -60,6 +60,7 @@ const app = {
     renderSong() {
         const htmls = this.songs.map((song, index) => {
             return
+            `
             <li class="playlist__item" data-index="${index}">
                 <div class="playlist__item-img">
                     <img src="${song.image}" alt="">
@@ -81,6 +82,7 @@ const app = {
             </li>
         })
         playlistList.innerHTML = htmls.join('')
+        `
     },
 
     activeSong() {
