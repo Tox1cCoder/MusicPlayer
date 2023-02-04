@@ -79,7 +79,6 @@ const app = {
                     <i class="fa-solid fa-ellipsis"></i>
                 </span>
             </li>
-            
         })
         playlistList.innerHTML = htmls.join('')
     },
