@@ -39,21 +39,21 @@ const app = {
 
     songs: [
         {
-            name: 'Matane Ga Areba',
-            author: 'Mirei Touyama',
+            name: 'Ditto',
+            author: 'NewJeans',
             image: './assets/img/song1.jpg',
-            path: './assets/music/song1.mp3'
+            path: './assets/music/song1.m4a'
         }, {
-            name: 'Vây Giữ',
-            author: 'Vương Tĩnh Văn',
+            name: 'OMG',
+            author: 'NewJeans',
             image: './assets/img/song2.jpg',
-            path: './assets/music/song2.mp3'
+            path: './assets/music/song2.m4a'
         },
         {
-            name: 'Thời Không Sai Lệch',
-            author: 'Ngải Thần',
+            name: 'Hype Boy',
+            author: 'NewJeans',
             image: './assets/img/song3.jpg',
-            path: './assets/music/song3.mp3'
+            path: './assets/music/song3.m4a'
         }
     ],
 
